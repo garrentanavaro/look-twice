@@ -1,0 +1,17 @@
+numpy
+pandas
+pyyaml
+opencv-python-headless>=4.8
+tqdm
+
+torch
+torchvision
+timm>=1.0
+albumentations>=2.0
+scikit-learn
+matplotlib
+
+onnx
+onnxruntime
+
+pytest

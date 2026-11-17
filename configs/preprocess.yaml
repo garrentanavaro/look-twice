@@ -1,12 +1,12 @@
 split:
   n_val: 4
   n_test: 4
-  seed: 42
+  seed: 185
   policy: strict
 
 extract:
   frames_real: 18
-  frames_fake: 2
+  frames_fake: 4
   edge_margin: 0.05
   retries: 3
   retry_step: 6

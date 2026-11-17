@@ -1,0 +1,4 @@
+recipe: A
+optim: {name: adam, lr: 1.0e-3, weight_decay: 1.0e-4, batch_size: 16}
+sched: {name: constant}
+train: {epochs: 20, early_stop_patience: 5}

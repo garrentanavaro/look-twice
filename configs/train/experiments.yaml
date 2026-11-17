@@ -1,0 +1,26 @@
+base: [configs/train/base.yaml]
+recipes:
+  A: configs/train/recipe_A.yaml
+  B: configs/train/recipe_B.yaml
+  C: configs/train/recipe_C.yaml
+
+stages:
+  stage1:
+    models: [resnet50, xception, efficientnet_b4]
+    recipes: [A, B, C]
+
+  stage2:
+    model: null
+    recipe: null
+    runs:
+      E1_no_aug:     {aug.enabled: false}
+      E2_frozen:     {model.freeze_backbone: true}
+      E3_no_ls:      {loss.label_smoothing: 0.0}
+      E4_lr_x10:     {optim.lr_scale: 10.0}
+      E4_lr_div10:   {optim.lr_scale: 0.1}
+
+  stage3:
+    model: null
+    recipe: null
+    overrides: {}
+    seeds: [1, 2]

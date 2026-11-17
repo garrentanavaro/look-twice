@@ -1,0 +1,4 @@
+recipe: B
+optim: {name: adamw, lr: 1.0e-4, weight_decay: 1.0e-2, batch_size: 32}
+sched: {name: cosine, t_max: null}
+train: {epochs: 25, early_stop_patience: 5}

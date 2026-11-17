@@ -1,0 +1,4 @@
+recipe: C
+optim: {name: sgd, lr: 1.0e-3, momentum: 0.9, weight_decay: 1.0e-4, batch_size: 32}
+sched: {name: plateau, factor: 0.5, patience: 3}
+train: {epochs: 30, early_stop_patience: 7}

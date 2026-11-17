@@ -1,0 +1,18 @@
+split:
+  n_val: 4
+  n_test: 4
+  seed: 42
+  policy: strict
+
+extract:
+  frames_real: 18
+  frames_fake: 2
+  edge_margin: 0.05
+  retries: 3
+  retry_step: 6
+  bbox_scale: 1.2
+  save_size: 256
+  jpeg_quality: 95
+  min_score: 0.7
+  detector: yunet
+  detector_path: weights/face_detection_yunet_2023mar.onnx

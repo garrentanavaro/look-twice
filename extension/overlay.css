@@ -1,0 +1,56 @@
+.looktwice-badge {
+  position: fixed;
+  z-index: 2147483647;
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 320px;
+  padding: 6px 12px 6px 6px;
+  border-radius: 999px;
+  background: rgba(17, 17, 16, 0.86);
+  color: #f0efec;
+  font: 600 13px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  letter-spacing: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  border: 2px solid #8a8984;
+  transition: border-color 0.2s;
+}
+.looktwice-badge[hidden] { display: none; }
+
+.looktwice-badge .lt-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #8a8984;
+  color: #111110;
+  font-size: 13px;
+  font-weight: 800;
+  flex: none;
+}
+.looktwice-badge .lt-score {
+  font-weight: 500;
+  color: #c3c2b7;
+  font-variant-numeric: tabular-nums;
+}
+.looktwice-badge .lt-score:empty { display: none; }
+
+.looktwice-badge[data-status="authentic"] { border-color: #0ca30c; }
+.looktwice-badge[data-status="authentic"] .lt-icon { background: #0ca30c; color: #ffffff; }
+
+.looktwice-badge[data-status="uncertain"] { border-color: #fab219; }
+.looktwice-badge[data-status="uncertain"] .lt-icon { background: #fab219; color: #111110; }
+
+.looktwice-badge[data-status="manipulated"] { border-color: #d03b3b; }
+.looktwice-badge[data-status="manipulated"] .lt-icon { background: #d03b3b; color: #ffffff; }
+.looktwice-badge[data-status="manipulated"] { font-size: 14px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .looktwice-badge { transition: none; }
+}
+@media (forced-colors: active) {
+  .looktwice-badge { border: 2px solid CanvasText; background: Canvas; color: CanvasText; }
+  .looktwice-badge .lt-icon { border: 1px solid CanvasText; }
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LookTwice</title>
+  <style>
+    :root { --bg: #fcfcfb; --text: #0b0b0b; --muted: #52514e; --line: #e4e3df; --good: #0ca30c; --bad: #d03b3b; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1a1a19; --text: #f0efec; --muted: #c3c2b7; --line: #383835; }
+    }
+    body { margin: 0; width: 300px; background: var(--bg); color: var(--text);
+           font: 13px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    main { padding: 14px 16px; display: grid; gap: 12px; }
+    h1 { font-size: 16px; margin: 0; }
+    label.row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+    input[type=text] { width: 100%; box-sizing: border-box; padding: 6px 8px; border: 1px solid var(--line);
+                       border-radius: 6px; background: transparent; color: var(--text); font: inherit; }
+    .status { display: flex; gap: 6px; align-items: center; color: var(--muted); }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); flex: none; }
+    .ok .dot { background: var(--good); } .err .dot { background: var(--bad); }
+    table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    td { padding: 3px 0; border-bottom: 1px solid var(--line); } td:last-child { text-align: right; }
+    .muted { color: var(--muted); font-size: 12px; }
+    button { font: inherit; padding: 5px 10px; border-radius: 6px; border: 1px solid var(--line);
+             background: transparent; color: var(--text); cursor: pointer; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>LookTwice</h1>
+    <label class="row">Analyze videos <input type="checkbox" id="enabled"></label>
+    <label>Backend URL <input type="text" id="backendUrl" spellcheck="false"></label>
+    <div class="status" id="health"><span class="dot"></span><span id="healthText">Checking backend…</span></div>
+    <section>
+      <strong>This session</strong>
+      <table id="stats"></table>
+      <p class="muted">Round trip = capture → backend → result. Capture = time spent grabbing a frame on this page.</p>
+      <button id="reset">Reset stats</button>
+    </section>
+    <p class="muted">Frames are analyzed in memory by your local backend and never stored.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

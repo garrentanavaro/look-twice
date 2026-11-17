@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+onnxruntime
+opencv-python-headless>=4.8
+numpy
+pyyaml

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LookTwice Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <h1>LookTwice</h1>
+      <p>Video evaluation session</p>
+    </div>
+    <form id="session" class="session" autocomplete="off">
+      <label>Participant ID <input id="pid" required placeholder="P01" maxlength="12"></label>
+      <label>Clip set
+        <select id="set"><option value="A">Set A</option><option value="B">Set B</option></select>
+      </label>
+      <label>Condition
+        <select id="phase">
+          <option value="unassisted">Without extension</option>
+          <option value="assisted">With LookTwice extension</option>
+        </select>
+      </label>
+    </form>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p>Watch each clip, then decide whether the person's face is <strong>real</strong> or a <strong>deepfake</strong>,
+        and how sure you are. There is no time limit. Your answers are saved in this browser only.</p>
+    </section>
+    <p id="empty" class="empty" hidden></p>
+    <section id="clips" class="clips" aria-live="polite"></section>
+  </main>
+
+  <footer class="bar">
+    <span id="progress" class="progress">0 of 0 answered</span>
+    <div class="actions">
+      <button type="button" id="clear" class="ghost">Clear this session</button>
+      <button type="button" id="download">Download all answers (CSV)</button>
+    </div>
+  </footer>
+
+  <template id="clip-tpl">
+    <article class="clip">
+      <h2 class="clip-title"></h2>
+      <div class="player"><video controls preload="metadata" playsinline></video></div>
+      <fieldset class="q">
+        <legend>Is this face real or a deepfake?</legend>
+        <label><input type="radio" value="real"> Real</label>
+        <label><input type="radio" value="fake"> Deepfake</label>
+      </fieldset>
+      <fieldset class="q">
+        <legend>How sure are you?</legend>
+        <div class="scale">
+          <span class="muted">Guess</span>
+          <label><input type="radio" value="1">1</label>
+          <label><input type="radio" value="2">2</label>
+          <label><input type="radio" value="3">3</label>
+          <label><input type="radio" value="4">4</label>
+          <label><input type="radio" value="5">5</label>
+          <span class="muted">Certain</span>
+        </div>
+      </fieldset>
+    </article>
+  </template>
+
+  <script src="demo.js"></script>
+</body>
+</html>

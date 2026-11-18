@@ -7,7 +7,7 @@
     window: 10,
     minSamples: 3,
     noFaceLimit: 4,
-    maxSide: 640,
+    maxSide: 1280,
     jpegQuality: 0.8,
     minVideoSide: 160,
   };

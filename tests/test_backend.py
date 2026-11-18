@@ -74,6 +74,37 @@ def test_predict_matches_direct_onnx(onnx_path):
     assert p.predict(data)["prob"] == pytest.approx(float(ref), abs=1e-6)
 
 
+class Float32Detector:
+    def detect(self, img):
+        from looktwice.data.faces import Detection
+        h, w = img.shape[:2]
+        f = np.array([w * 0.3, h * 0.25, w * 0.4, h * 0.5, 0.97], dtype=np.float32)
+        return [Detection(*f)]
+
+
+def test_predict_with_numpy_detection(onnx_path):
+    c = TestClient(create_app(Predictor(onnx_path, Float32Detector()), Path("does-not-exist")))
+    r = c.post("/predict", content=jpeg())
+    assert r.status_code == 200 and r.json()["face_found"]
+
+
+def test_yunet_returns_python_floats():
+    from looktwice.data import faces
+    det = faces.YuNetDetector.__new__(faces.YuNetDetector)
+    det.max_side = 640
+
+    class FakeNet:
+        def setInputSize(self, size):
+            pass
+
+        def detect(self, img):
+            return 1, np.array([[10, 20, 30, 40] + [0] * 10 + [0.9]], dtype=np.float32)
+
+    det.net = FakeNet()
+    d = det.detect(np.zeros((1080, 1920, 3), np.uint8))[0]
+    assert all(type(v) is float for v in (d.x, d.y, d.w, d.h, d.score))
+
+
 def test_predict_no_face(onnx_path):
     c = TestClient(create_app(Predictor(onnx_path, NoFaceDetector()), Path("does-not-exist")))
     res = c.post("/predict", content=jpeg()).json()

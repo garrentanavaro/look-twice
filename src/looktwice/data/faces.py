@@ -52,7 +52,8 @@ class YuNetDetector:
         _, faces = self.net.detect(small)
         if faces is None:
             return []
-        return [Detection(f[0] / scale, f[1] / scale, f[2] / scale, f[3] / scale, float(f[14]))
+        return [Detection(float(f[0]) / scale, float(f[1]) / scale, float(f[2]) / scale, float(f[3]) / scale,
+                          float(f[14]))
                 for f in faces]
 
 

@@ -67,8 +67,8 @@ class Predictor:
             prob = float(self.session.run(["prob"], {"image": x})[0][0])
             h, w = img.shape[:2]
             out.update(prob=prob, badge=str(badge_for([prob], self.lo, self.hi)[0]),
-                       box=[round(face.x / w, 4), round(face.y / h, 4), round(face.w / w, 4), round(face.h / h, 4)],
-                       face_score=round(face.score, 3))
+                       box=[round(float(v) / s, 4) for v, s in ((face.x, w), (face.y, h), (face.w, w), (face.h, h))],
+                       face_score=round(float(face.score), 3))
         t3 = time.perf_counter()
         out["latency_ms"] = {"decode": (t1 - t0) * 1e3, "detect": (t2 - t1) * 1e3,
                              "infer": (t3 - t2) * 1e3 if face is not None else 0.0, "total": (t3 - t0) * 1e3}

@@ -10,8 +10,8 @@ stages:
     recipes: [A, B, C]
 
   stage2:
-    model: null
-    recipe: null
+    model: xception
+    recipe: B
     runs:
       E1_no_aug:     {aug.enabled: false}
       E2_frozen:     {model.freeze_backbone: true}
@@ -20,7 +20,7 @@ stages:
       E4_lr_div10:   {optim.lr_scale: 0.1}
 
   stage3:
-    model: null
-    recipe: null
+    model: xception
+    recipe: B
     overrides: {}
     seeds: [1, 2]

@@ -65,6 +65,12 @@ python -m looktwice.run_experiments --stage stage1 --set data.index=<path/to/cro
 python -m looktwice.run_experiments --collect
 ```
 
+All 16 runs (Stages 1–3) have been completed on Kaggle (`Tesla T4`); summary metrics and training curves are recorded in `results/runs_summary.csv`, `results/curves/`, and `results/runs_meta/`:
+
+- **Stage 1 (3 architectures × 3 recipes):** `s1_xception_B` (`xception` + Recipe `B`) ranked highest on validation (`val_auc=0.9602`, `val_f1=0.8589`, `val_video_auc=0.9838`, `val_video_f1=0.9333`) with `14.8 ms` p95 CPU ONNX latency (`results/stage1_latency_check.csv`, under the `200 ms` budget).
+- **Stage 2 (5 single-variable ablations on `xception` + Recipe `B`):** All ablations scored below the baseline (`E1_no_aug` `0.9564`, `E3_no_ls` `0.9554`, `E4_lr_div10` `0.9530`, `E4_lr_x10` `0.9517`, `E2_frozen` `0.7828`).
+- **Stage 3 (seeds `1`, `2`, `42`):** `val_auc = 0.9566 ± 0.0037`, `val_f1 = 0.8441 ± 0.0144`, `val_video_auc = 0.9829 ± 0.0018`.
+
 ## Evaluation and export
 
 See `notebooks/03_evaluate_kaggle.ipynb`.

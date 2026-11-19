@@ -55,13 +55,21 @@ The stages communicate through files, and each file format is a contract the nex
 - `build_detector` accepts `"module:Class"`; tests use `test_data_pipeline:DummyDetector` (also usable as `LOOKTWICE_DETECTOR` for the backend) to run without the YuNet model.
 - `run_extract` builds the detector in the main process before starting the `Pool`: a failing Pool initializer makes Windows respawn workers forever and the run hangs silently.
 - On Kaggle, attached datasets live under `/kaggle/input/datasets/<owner>/<slug>`; notebooks locate the DFD folder with a recursive glob.
+- Kaggle CLI (`kaggle>=1.8.0`, `.venv` uses `2.2.5`) reads `~/.kaggle/access_token.txt` (generated via "Generate New Token") as well as legacy `kaggle.json`; `kaggle 2.2.5` also needs `six` installed. Phone verification on the Kaggle account is required for GPU + outbound Internet/DNS (`git clone`, `huggingface.co`).
 - Line endings are mixed: Python, YAML and requirements files are CRLF, while JS/HTML/CSS, READMEs and some notebooks are LF. Keep each file's existing endings when editing so diffs stay small (`sed -i` in Git Bash silently converts to LF).
 
-## Current state (2026-11-18)
+## Current state (2026-11-19)
 
-- All code is written and tested on synthetic data. No real training run exists yet; do not report any model metric that has not been produced by a run.
-- Real DFD preprocessing finished on Kaggle (notebook `looktwice-01-preprocess`): 3,431 videos, 28 actors. Chosen split: `strict`, seed 185 (val actors 03, 06, 11, 14; test actors 02, 04, 07, 09; fake videos train 1,148 / val 143 / test 137, 1,640 dropped). `frames_fake` was raised from 2 to 4 so train crops are balanced (~4.6k per class). `configs/preprocess.yaml` matches these settings. Output dataset: `garrentanavaro/looktwice-faces` on Kaggle.
-- Next steps (Marco): create feature branch (`marco/stage1`), run Stage 1 training (9 runs: 3 models × 3 recipes) via `notebooks/02_train_kaggle.ipynb`, collect `results/runs_summary.csv` and training curves, select best model + recipe, update `configs/train/experiments.yaml` (`stage2` & `stage3`), run Stage 2 (5 ablations) and Stage 3 (2 extra seeds), then push results/tables via PR to `main`.
+- All 45 unit tests pass locally on CPU (`.\.venv\Scripts\python.exe -m pytest -q`, Python `3.12.10`).
+- Real DFD preprocessing finished on Kaggle (`looktwice-01-preprocess`): 3,431 videos, 28 actors. Chosen split: `strict`, seed 185 (val actors 03, 06, 11, 14; test actors 02, 04, 07, 09; fake videos train 1,148 / val 143 / test 137, 1,640 dropped). `frames_fake` = 4, `frames_real` = 18; actual crop counts in `data/faces/crops_index.csv` are train `4,604` real / `4,590` fake (`9,194`), val `1,026` real / `572` fake (`1,598`), test `899` real / `548` fake (`1,447`). Dataset `garrentanavaro/looktwice-faces` is also extracted locally under `data/`.
+- Training Stages 1–3 (16/16 runs) completed on Kaggle `Tesla T4` (`marcoodenleo/looktwice-02-stage1`, `looktwice-02-stage2`, `looktwice-02-stage3`); results are in `results/runs_summary.csv`, `results/curves/`, `results/runs_meta/`, and `runs/` (git-ignored):
+  - **Stage 1 (9 runs):** `s1_xception_B` (`xception` + Recipe `B`) won with `val_auc=0.9602`, `val_f1=0.8589`, `val_acc=0.8999`, `val_video_auc=0.9838`, `val_video_f1=0.9333` (runner-up: `s1_efficientnet_b4_A` at `val_auc=0.9536`, `val_f1=0.8501`). Local ONNX CPU benchmark (`results/stage1_latency_check.csv`, Intel i7-13650HX): `s1_xception_B` `mean 14.1 ms` / `p95 14.8 ms` (`< 200 ms` satisfied).
+  - **Stage 2 (5 ablations on `xception` + Recipe `B`):** All ablations scored below baseline (`E1_no_aug` `0.9564`, `E3_no_ls` `0.9554`, `E4_lr_div10` `0.9530`, `E4_lr_x10` `0.9517`, `E2_frozen` `0.7828`), so `configs/train/experiments.yaml` keeps `stage3.overrides: {}`.
+  - **Stage 3 (seeds `1`, `2`, `42`):** `val_auc = 0.9566 ± 0.0037`, `val_f1 = 0.8441 ± 0.0144`, `val_acc = 0.8928 ± 0.0066`, `val_video_auc = 0.9829 ± 0.0018`, `val_video_f1 = 0.9137 ± 0.0270`.
+- Next steps:
+  - Marco: commit `results/` (branch `stage1`), PR to `main`, share `marcoodenleo/looktwice-02-stage3` output (`runs/`) with Jason & Garren, draft report chapters (*DL Fundamentals & Model*, *Experimental Methodology*, *Results*).
+  - Jason: Stage 4 test-set evaluation + ONNX export (`notebooks/03_evaluate_kaggle.ipynb`; note `s1_efficientnet_b4_A` outperformed `s1_efficientnet_b4_B` on validation) & Stage 6 user study.
+  - Garren: Stage 5 live Chrome extension + FastAPI backend testing.
 
 ## Repository conventions
 

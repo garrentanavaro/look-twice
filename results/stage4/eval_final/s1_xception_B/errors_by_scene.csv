@@ -1,0 +1,17 @@
+scene,error_rate_real,error_rate_fake,n_real,n_fake
+walking_down_indoor_hall_disgust,0.16666666666666666,,18.0,
+outside_talking_pan_laughing,0.06944444444444445,0.019230769230769232,72.0,52.0
+outside_talking_still_laughing,0.05555555555555555,0.05,72.0,40.0
+hugging_happy,0.05555555555555555,0.125,36.0,40.0
+walk_down_hall_angry,0.028169014084507043,0.109375,71.0,64.0
+secret_conversation,0.018518518518518517,0.6388888888888888,54.0,36.0
+talking_against_wall,0.013888888888888888,0.0,72.0,20.0
+walking_down_street_outside_angry,0.013888888888888888,0.0,72.0,36.0
+podium_speech_happy,0.0,0.14583333333333334,72.0,48.0
+meeting_serious,0.0,1.0,18.0,20.0
+kitchen_pan,0.0,0.55,72.0,60.0
+kitchen_still,0.0,0.5,54.0,32.0
+exit_phone_room,0.0,0.0,72.0,56.0
+talking_angry_couch,0.0,0.45,72.0,20.0
+walking_and_outside_surprised,0.0,0.5,18.0,12.0
+walking_outside_cafe_disgusted,0.0,0.08333333333333333,54.0,12.0

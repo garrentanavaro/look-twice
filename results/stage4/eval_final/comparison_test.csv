@@ -1,0 +1,2 @@
+run,model,params_M,threshold,uncertain_band,frame_acc,frame_precision,frame_recall,frame_f1,frame_auc,video_acc,video_precision,video_recall,video_f1,video_auc,uncertain_frac,confident_acc,val_auc,sec_per_epoch
+s1_xception_B,xception,20.81,0.7353,"[0.34, 1.00)",0.8970283344851416,0.9565217391304348,0.7627737226277372,0.848730964467005,0.9490066010084197,0.8235294117647058,1.0,0.7591240875912408,0.8630705394190872,0.9689051094890511,0.4402,0.917283950617284,0.9602110852110852,63.94872546195984

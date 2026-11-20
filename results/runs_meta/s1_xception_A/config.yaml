@@ -1,0 +1,46 @@
+seed: 42
+out_dir: /kaggle/working/runs
+device: auto
+data:
+  index: /kaggle/input/datasets/garrentanavaro/looktwice-faces/data/faces/crops_index.csv
+  root: null
+  num_workers: 4
+  max_train: null
+  max_val: null
+model:
+  name: xception
+  pretrained: true
+  drop_rate: 0.0
+  freeze_backbone: false
+input_size: 224
+aug:
+  enabled: true
+  jpeg_quality:
+  - 40
+  - 80
+  jpeg_p: 0.5
+  blur_limit:
+  - 3
+  - 7
+  blur_p: 0.2
+  brightness: 0.2
+  contrast: 0.2
+  bc_p: 0.5
+loss:
+  label_smoothing: 0.05
+  pos_weight: null
+train:
+  amp: true
+  grad_clip: null
+  monitor: val_auc
+  epochs: 20
+  early_stop_patience: 5
+recipe: A
+optim:
+  name: adam
+  lr: 0.001
+  weight_decay: 0.0001
+  batch_size: 16
+sched:
+  name: constant
+run_name: s1_xception_A

@@ -1,0 +1,155 @@
+[{"stream_name":"stderr","time":7.935497875,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":7.935564343,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":9.021380137,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.021410043,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.021415103,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.021419193,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.671228151,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.671259103,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.671268101,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.671270647,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.969946610000001,"data":"Cloning into '/kaggle/working/look-twice'...\n"}
+,{"stream_name":"stderr","time":11.172948181,"data":"Cloning into '/kaggle/working/look-twice'...\n"}
+,{"stream_name":"stderr","time":11.173154793,"data":"\n"}
+,{"stream_name":"stderr","time":11.173162913,"data":"Cloning into '/kaggle/working/look-twice'...\n"}
+,{"stream_name":"stdout","time":16.368319118,"data":"  Installing build dependencies ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":16.775606332,"data":"  Checking if build backend supports build_editable ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":17.183849874,"data":"  Getting requirements to build editable ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":17.438611873,"data":"  Preparing editable metadata (pyproject.toml) ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":17.896430365,"data":"  Building editable for looktwice (pyproject.toml) ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":19.402507131,"data":"name, memory.total [MiB]\r\n"}
+,{"stream_name":"stdout","time":19.402544305,"data":"Tesla T4, 15360 MiB\r\n"}
+,{"stream_name":"stdout","time":19.402548942,"data":"Tesla T4, 15360 MiB\r\n"}
+,{"stream_name":"stdout","time":25.448094426,"data":"INDEX: /kaggle/input/datasets/garrentanavaro/looktwice-faces/data/faces/crops_index.csv\n"}
+,{"stream_name":"stdout","time":25.448132059,"data":"PREV_RUNS: ['/kaggle/input/notebooks/marcoodenleo/looktwice-02-stage1/runs']\n"}
+,{"stream_name":"stdout","time":25.448137166,"data":"cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead\r\n"}
+,{"stream_name":"stdout","time":34.001250813,"data":"label     0     1\n"}
+,{"stream_name":"stdout","time":34.001287364,"data":"split            \n"}
+,{"stream_name":"stdout","time":34.001292713,"data":"test    899   548\n"}
+,{"stream_name":"stdout","time":34.00129674,"data":"train  4604  4590\n"}
+,{"stream_name":"stdout","time":34.001319442,"data":"val    1026   572\n"}
+,{"stream_name":"stdout","time":56.477313242,"data":"[1/5] s2_xception_B_E1_no_aug: run  overrides={'model.name': 'xception', 'aug.enabled': False}\r\n"}
+,{"stream_name":"stdout","time":57.140083269,"data":"Downloading: \"https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-cadene/xception-43020ad28.pth\" to /root/.cache/torch/hub/checkpoints/xception-43020ad28.pth\r\n"}
+,{"stream_name":"stdout","time":58.820619528,"data":"[s2_xception_B_E1_no_aug] device=cuda amp=True train=9194 val=1598 params=20.8M trainable=20.8M mean=(0.5, 0.5, 0.5) std=(0.5, 0.5, 0.5)\r\n"}
+,{"stream_name":"stdout","time":336.099474636,"data":"  ep01 lr=1.00e-04 train_loss=0.3206 val_loss=0.3164 val_auc=0.9535 val_f1=0.8476 video_auc=0.9802 (277s) *\r\n"}
+,{"stream_name":"stdout","time":399.687702717,"data":"  ep02 lr=9.96e-05 train_loss=0.2041 val_loss=0.3561 val_auc=0.9369 val_f1=0.8080 video_auc=0.9633 (63s)\r\n"}
+,{"stream_name":"stdout","time":462.568041669,"data":"  ep03 lr=9.84e-05 train_loss=0.1903 val_loss=0.3166 val_auc=0.9564 val_f1=0.8450 video_auc=0.9755 (63s) *\r\n"}
+,{"stream_name":"stdout","time":525.711940683,"data":"  ep04 lr=9.65e-05 train_loss=0.1710 val_loss=0.3584 val_auc=0.9353 val_f1=0.8290 video_auc=0.9582 (63s)\r\n"}
+,{"stream_name":"stdout","time":588.706400914,"data":"  ep05 lr=9.38e-05 train_loss=0.1687 val_loss=0.3403 val_auc=0.9459 val_f1=0.8325 video_auc=0.9696 (63s)\r\n"}
+,{"stream_name":"stdout","time":651.435592811,"data":"  ep06 lr=9.05e-05 train_loss=0.1565 val_loss=0.3682 val_auc=0.9420 val_f1=0.8381 video_auc=0.9686 (63s)\r\n"}
+,{"stream_name":"stdout","time":714.38953905,"data":"  ep07 lr=8.64e-05 train_loss=0.1497 val_loss=0.3678 val_auc=0.9377 val_f1=0.8410 video_auc=0.9622 (63s)\r\n"}
+,{"stream_name":"stdout","time":777.194326683,"data":"  ep08 lr=8.19e-05 train_loss=0.1436 val_loss=0.3498 val_auc=0.9403 val_f1=0.8526 video_auc=0.9671 (63s)\r\n"}
+,{"stream_name":"stdout","time":777.194394778,"data":"  early stop at epoch 8 (best val_auc=0.9564 @ 3)\r\n"}
+,{"stream_name":"stdout","time":777.291348962,"data":"[2/5] s2_xception_B_E2_frozen: run  overrides={'model.name': 'xception', 'model.freeze_backbone': True}\r\n"}
+,{"stream_name":"stdout","time":777.801171209,"data":"[s2_xception_B_E2_frozen] device=cuda amp=True train=9194 val=1598 params=20.8M trainable=0.0M mean=(0.5, 0.5, 0.5) std=(0.5, 0.5, 0.5)\r\n"}
+,{"stream_name":"stdout","time":805.399116303,"data":"  ep01 lr=1.00e-04 train_loss=0.6824 val_loss=0.6670 val_auc=0.6918 val_f1=0.4222 video_auc=0.7402 (28s) *\r\n"}
+,{"stream_name":"stdout","time":832.560845167,"data":"  ep02 lr=9.96e-05 train_loss=0.6601 val_loss=0.6367 val_auc=0.7337 val_f1=0.2609 video_auc=0.7967 (27s) *\r\n"}
+,{"stream_name":"stdout","time":859.7354653,"data":"  ep03 lr=9.84e-05 train_loss=0.6441 val_loss=0.6272 val_auc=0.7450 val_f1=0.3695 video_auc=0.8070 (27s) *\r\n"}
+,{"stream_name":"stdout","time":886.973809664,"data":"  ep04 lr=9.65e-05 train_loss=0.6314 val_loss=0.6105 val_auc=0.7570 val_f1=0.4005 video_auc=0.8233 (27s) *\r\n"}
+,{"stream_name":"stdout","time":914.209141328,"data":"  ep05 lr=9.38e-05 train_loss=0.6237 val_loss=0.6040 val_auc=0.7580 val_f1=0.4246 video_auc=0.8216 (27s) *\r\n"}
+,{"stream_name":"stdout","time":941.201269152,"data":"  ep06 lr=9.05e-05 train_loss=0.6142 val_loss=0.5993 val_auc=0.7693 val_f1=0.5237 video_auc=0.8385 (27s) *\r\n"}
+,{"stream_name":"stdout","time":967.84131186,"data":"  ep07 lr=8.64e-05 train_loss=0.6067 val_loss=0.5909 val_auc=0.7673 val_f1=0.4357 video_auc=0.8355 (26s)\r\n"}
+,{"stream_name":"stdout","time":994.63042377,"data":"  ep08 lr=8.19e-05 train_loss=0.6020 val_loss=0.5914 val_auc=0.7628 val_f1=0.4995 video_auc=0.8290 (27s)\r\n"}
+,{"stream_name":"stdout","time":1021.445255075,"data":"  ep09 lr=7.68e-05 train_loss=0.5974 val_loss=0.5859 val_auc=0.7748 val_f1=0.5310 video_auc=0.8453 (27s) *\r\n"}
+,{"stream_name":"stdout","time":1048.29888023,"data":"  ep10 lr=7.13e-05 train_loss=0.5926 val_loss=0.5807 val_auc=0.7752 val_f1=0.4824 video_auc=0.8439 (27s) *\r\n"}
+,{"stream_name":"stdout","time":1075.303611313,"data":"  ep11 lr=6.55e-05 train_loss=0.5870 val_loss=0.5831 val_auc=0.7703 val_f1=0.5546 video_auc=0.8397 (27s)\r\n"}
+,{"stream_name":"stdout","time":1102.23289705,"data":"  ep12 lr=5.94e-05 train_loss=0.5903 val_loss=0.5775 val_auc=0.7718 val_f1=0.4542 video_auc=0.8400 (27s)\r\n"}
+,{"stream_name":"stdout","time":1129.150616416,"data":"  ep13 lr=5.31e-05 train_loss=0.5818 val_loss=0.5754 val_auc=0.7769 val_f1=0.5038 video_auc=0.8458 (27s) *\r\n"}
+,{"stream_name":"stdout","time":1156.034642497,"data":"  ep14 lr=4.69e-05 train_loss=0.5826 val_loss=0.5754 val_auc=0.7747 val_f1=0.4989 video_auc=0.8442 (27s)\r\n"}
+,{"stream_name":"stdout","time":1182.680909664,"data":"  ep15 lr=4.06e-05 train_loss=0.5824 val_loss=0.5740 val_auc=0.7772 val_f1=0.4968 video_auc=0.8466 (27s) *\r\n"}
+,{"stream_name":"stdout","time":1209.855723881,"data":"  ep16 lr=3.45e-05 train_loss=0.5796 val_loss=0.5714 val_auc=0.7828 val_f1=0.4643 video_auc=0.8541 (27s) *\r\n"}
+,{"stream_name":"stdout","time":1236.725439164,"data":"  ep17 lr=2.87e-05 train_loss=0.5804 val_loss=0.5726 val_auc=0.7768 val_f1=0.5032 video_auc=0.8453 (27s)\r\n"}
+,{"stream_name":"stdout","time":1263.44882263,"data":"  ep18 lr=2.32e-05 train_loss=0.5757 val_loss=0.5736 val_auc=0.7765 val_f1=0.5152 video_auc=0.8479 (27s)\r\n"}
+,{"stream_name":"stdout","time":1290.177690274,"data":"  ep19 lr=1.81e-05 train_loss=0.5798 val_loss=0.5701 val_auc=0.7759 val_f1=0.5038 video_auc=0.8463 (27s)\r\n"}
+,{"stream_name":"stdout","time":1316.772512104,"data":"  ep20 lr=1.36e-05 train_loss=0.5754 val_loss=0.5775 val_auc=0.7713 val_f1=0.5027 video_auc=0.8401 (27s)\r\n"}
+,{"stream_name":"stdout","time":1343.474865676,"data":"  ep21 lr=9.55e-06 train_loss=0.5747 val_loss=0.5698 val_auc=0.7802 val_f1=0.5331 video_auc=0.8523 (27s)\r\n"}
+,{"stream_name":"stdout","time":1343.474915971,"data":"  early stop at epoch 21 (best val_auc=0.7828 @ 16)\r\n"}
+,{"stream_name":"stdout","time":1343.576526112,"data":"[3/5] s2_xception_B_E3_no_ls: run  overrides={'model.name': 'xception', 'loss.label_smoothing': 0.0}\r\n"}
+,{"stream_name":"stdout","time":1344.085585643,"data":"[s2_xception_B_E3_no_ls] device=cuda amp=True train=9194 val=1598 params=20.8M trainable=20.8M mean=(0.5, 0.5, 0.5) std=(0.5, 0.5, 0.5)\r\n"}
+,{"stream_name":"stdout","time":1407.445958599,"data":"  ep01 lr=1.00e-04 train_loss=0.3247 val_loss=0.2457 val_auc=0.9554 val_f1=0.8337 video_auc=0.9812 (63s) *\r\n"}
+,{"stream_name":"stdout","time":1470.597911341,"data":"  ep02 lr=9.96e-05 train_loss=0.1805 val_loss=0.2872 val_auc=0.9486 val_f1=0.8276 video_auc=0.9717 (63s)\r\n"}
+,{"stream_name":"stdout","time":1533.494985277,"data":"  ep03 lr=9.84e-05 train_loss=0.1401 val_loss=0.2815 val_auc=0.9506 val_f1=0.8391 video_auc=0.9737 (63s)\r\n"}
+,{"stream_name":"stdout","time":1596.4844925,"data":"  ep04 lr=9.65e-05 train_loss=0.1118 val_loss=0.3087 val_auc=0.9460 val_f1=0.8500 video_auc=0.9682 (63s)\r\n"}
+,{"stream_name":"stdout","time":1659.380958822,"data":"  ep05 lr=9.38e-05 train_loss=0.1061 val_loss=0.3002 val_auc=0.9467 val_f1=0.8336 video_auc=0.9760 (63s)\r\n"}
+,{"stream_name":"stdout","time":1722.341442892,"data":"  ep06 lr=9.05e-05 train_loss=0.0969 val_loss=0.3553 val_auc=0.9466 val_f1=0.8484 video_auc=0.9612 (63s)\r\n"}
+,{"stream_name":"stdout","time":1722.341479834,"data":"  early stop at epoch 6 (best val_auc=0.9554 @ 1)\r\n"}
+,{"stream_name":"stdout","time":1722.429187005,"data":"[4/5] s2_xception_B_E4_lr_x10: run  overrides={'model.name': 'xception', 'optim.lr_scale': 10.0}\r\n"}
+,{"stream_name":"stdout","time":1722.937248197,"data":"[s2_xception_B_E4_lr_x10] device=cuda amp=True train=9194 val=1598 params=20.8M trainable=20.8M mean=(0.5, 0.5, 0.5) std=(0.5, 0.5, 0.5)\r\n"}
+,{"stream_name":"stdout","time":1786.075896322,"data":"  ep01 lr=1.00e-03 train_loss=0.4024 val_loss=0.3169 val_auc=0.9517 val_f1=0.8261 video_auc=0.9816 (63s) *\r\n"}
+,{"stream_name":"stdout","time":1848.960429389,"data":"  ep02 lr=9.96e-04 train_loss=0.3177 val_loss=0.3679 val_auc=0.9411 val_f1=0.7853 video_auc=0.9707 (63s)\r\n"}
+,{"stream_name":"stdout","time":1911.649752522,"data":"  ep03 lr=9.84e-04 train_loss=0.2899 val_loss=0.3780 val_auc=0.9477 val_f1=0.8208 video_auc=0.9775 (63s)\r\n"}
+,{"stream_name":"stdout","time":1974.269251577,"data":"  ep04 lr=9.65e-04 train_loss=0.2696 val_loss=0.3590 val_auc=0.9284 val_f1=0.8280 video_auc=0.9676 (63s)\r\n"}
+,{"stream_name":"stdout","time":2036.915326653,"data":"  ep05 lr=9.38e-04 train_loss=0.2612 val_loss=0.3235 val_auc=0.9448 val_f1=0.8721 video_auc=0.9736 (63s)\r\n"}
+,{"stream_name":"stdout","time":2099.641898014,"data":"  ep06 lr=9.05e-04 train_loss=0.2492 val_loss=0.3849 val_auc=0.9378 val_f1=0.7864 video_auc=0.9737 (63s)\r\n"}
+,{"stream_name":"stdout","time":2099.641954997,"data":"  early stop at epoch 6 (best val_auc=0.9517 @ 1)\r\n"}
+,{"stream_name":"stdout","time":2099.7697863,"data":"[5/5] s2_xception_B_E4_lr_div10: run  overrides={'model.name': 'xception', 'optim.lr_scale': 0.1}\r\n"}
+,{"stream_name":"stdout","time":2100.279013796,"data":"[s2_xception_B_E4_lr_div10] device=cuda amp=True train=9194 val=1598 params=20.8M trainable=20.8M mean=(0.5, 0.5, 0.5) std=(0.5, 0.5, 0.5)\r\n"}
+,{"stream_name":"stdout","time":2163.619555073,"data":"  ep01 lr=1.00e-05 train_loss=0.6127 val_loss=0.4532 val_auc=0.8769 val_f1=0.7343 video_auc=0.9198 (63s) *\r\n"}
+,{"stream_name":"stdout","time":2226.66690098,"data":"  ep02 lr=9.96e-06 train_loss=0.3791 val_loss=0.3550 val_auc=0.9332 val_f1=0.7930 video_auc=0.9698 (63s) *\r\n"}
+,{"stream_name":"stdout","time":2289.486660288,"data":"  ep03 lr=9.84e-06 train_loss=0.3132 val_loss=0.3308 val_auc=0.9471 val_f1=0.8220 video_auc=0.9756 (63s) *\r\n"}
+,{"stream_name":"stdout","time":2352.333865692,"data":"  ep04 lr=9.65e-06 train_loss=0.2784 val_loss=0.3265 val_auc=0.9476 val_f1=0.8297 video_auc=0.9755 (63s) *\r\n"}
+,{"stream_name":"stdout","time":2415.132082138,"data":"  ep05 lr=9.38e-06 train_loss=0.2662 val_loss=0.3233 val_auc=0.9523 val_f1=0.8278 video_auc=0.9771 (63s) *\r\n"}
+,{"stream_name":"stdout","time":2478.159899231,"data":"  ep06 lr=9.05e-06 train_loss=0.2487 val_loss=0.3255 val_auc=0.9530 val_f1=0.8273 video_auc=0.9766 (63s) *\r\n"}
+,{"stream_name":"stdout","time":2541.315829393,"data":"  ep07 lr=8.64e-06 train_loss=0.2326 val_loss=0.3372 val_auc=0.9493 val_f1=0.8101 video_auc=0.9740 (63s)\r\n"}
+,{"stream_name":"stdout","time":2604.379088101,"data":"  ep08 lr=8.19e-06 train_loss=0.2257 val_loss=0.3173 val_auc=0.9529 val_f1=0.8395 video_auc=0.9764 (63s)\r\n"}
+,{"stream_name":"stdout","time":2667.33906214,"data":"  ep09 lr=7.68e-06 train_loss=0.2201 val_loss=0.3268 val_auc=0.9492 val_f1=0.8262 video_auc=0.9723 (63s)\r\n"}
+,{"stream_name":"stdout","time":2730.489659676,"data":"  ep10 lr=7.13e-06 train_loss=0.2210 val_loss=0.3258 val_auc=0.9498 val_f1=0.8349 video_auc=0.9730 (63s)\r\n"}
+,{"stream_name":"stdout","time":2793.39695889,"data":"  ep11 lr=6.55e-06 train_loss=0.2029 val_loss=0.3244 val_auc=0.9504 val_f1=0.8387 video_auc=0.9745 (63s)\r\n"}
+,{"stream_name":"stdout","time":2793.397022357,"data":"  early stop at epoch 11 (best val_auc=0.9530 @ 6)\r\n"}
+,{"stream_name":"stdout","time":2793.530154718,"data":"                      run           model recipe  seed  best_epoch  epochs_run  val_auc  val_f1  val_precision  val_recall  val_acc  val_video_auc  val_video_f1  final_train_loss  final_val_loss  params_total  params_trainable  checkpoint_mb  sec_per_epoch  train_time_s  peak_gpu_mem_mb\r\n"}
+,{"stream_name":"stdout","time":2793.53020446,"data":"     s1_efficientnet_b4_A efficientnet_b4      A    42           6          11   0.9536  0.8501         0.9295      0.7832   0.9011         0.9793        0.9084            0.2581          0.3293      17550409          17550409        67.6287        80.9305      890.8410        1995.8374\r\n"}
+,{"stream_name":"stdout","time":2793.530211505,"data":"     s1_efficientnet_b4_B efficientnet_b4      B    42           8          13   0.9041  0.7967         0.8283      0.7675   0.8598         0.9431        0.8837            0.1895          0.4439      17550409          17550409        67.6287        68.9023      896.7734        3738.1616\r\n"}
+,{"stream_name":"stdout","time":2793.53021707,"data":"     s1_efficientnet_b4_C efficientnet_b4      C    42          30          30   0.9038  0.7833         0.7960      0.7710   0.8473         0.9537        0.9049            0.2923          0.4354      17550409          17550409        67.6287        68.0236     2044.8445        3667.9482\r\n"}
+,{"stream_name":"stdout","time":2793.530221822,"data":"            s1_resnet50_A        resnet50      A    42           3           8   0.5769  0.5288         0.3762      0.8899   0.4324         0.6087        0.7885            0.6933          0.6939      23510081          23510081        89.9732        74.5162      596.5457        1044.9082\r\n"}
+,{"stream_name":"stdout","time":2793.530226926,"data":"            s1_resnet50_B        resnet50      B    42           1           6   0.9484  0.8374         0.8614      0.8147   0.8867         0.9826        0.9208            0.2155          0.4102      23510081          23510081        89.9732        42.3317      254.1716        1722.2832\r\n"}
+,{"stream_name":"stdout","time":2793.530232069,"data":"            s1_resnet50_C        resnet50      C    42           4          11   0.9478  0.8335         0.8069      0.8619   0.8767         0.9761        0.9420            0.1757          0.3407      23510081          23510081        89.9732        41.3569      455.4885        1631.5010\r\n"}
+,{"stream_name":"stdout","time":2793.530239356,"data":"            s1_xception_A        xception      A    42           2           7   0.9486  0.8169         0.9621      0.7098   0.8861         0.9821        0.8828            0.2946          0.3372      20809001          20809001        79.6686        68.1103      477.0257        1409.9077\r\n"}
+,{"stream_name":"stdout","time":2793.530244314,"data":"            s1_xception_B        xception      B    42           3           8   0.9602  0.8589         0.8665      0.8514   0.8999         0.9838        0.9333            0.1768          0.3634      20809001          20809001        79.6686        63.9487      511.8499        2500.6016\r\n"}
+,{"stream_name":"stdout","time":2793.530249594,"data":"            s1_xception_C        xception      C    42          14          21   0.9476  0.8323         0.8644      0.8024   0.8842         0.9760        0.9132            0.1991          0.3488      20809001          20809001        79.6686        62.7695     1319.1795        2420.5830\r\n"}
+,{"stream_name":"stdout","time":2793.530255151,"data":"  s2_xception_B_E1_no_aug        xception      B    42           3           8   0.9564  0.8450         0.8370      0.8531   0.8880         0.9755        0.9254            0.1436          0.3498      20809001          20809001        79.6686        89.7590      718.3666        2518.6577\r\n"}
+,{"stream_name":"stdout","time":2793.530260443,"data":"  s2_xception_B_E2_frozen        xception      B    42          16          21   0.7828  0.4643         0.6592      0.3584   0.7040         0.8541        0.5052            0.5747          0.5698      20809001              2049        79.6686        26.8654      565.6611         783.4106\r\n"}
+,{"stream_name":"stdout","time":2793.530265742,"data":"   s2_xception_B_E3_no_ls        xception      B    42           1           6   0.9554  0.8337         0.9198      0.7622   0.8911         0.9812        0.9084            0.0969          0.3553      20809001          20809001        79.6686        63.0170      378.2421        2514.3296\r\n"}
+,{"stream_name":"stdout","time":2793.530275587,"data":"s2_xception_B_E4_lr_div10        xception      B    42           6          11   0.9530  0.8273         0.9170      0.7535   0.8874         0.9766        0.8872            0.2029          0.3244      20809001          20809001        79.6686        62.9434      693.1086        2514.3296\r\n"}
+,{"stream_name":"stdout","time":2793.530281613,"data":"  s2_xception_B_E4_lr_x10        xception      B    42           1           6   0.9517  0.8261         0.9500      0.7308   0.8899         0.9816        0.8828            0.2492          0.3849      20809001          20809001        79.6686        62.7614      376.6922        2514.3296\r\n"}
+,{"stream_name":"stdout","time":2820.883900121,"data":"                      run           model recipe  seed  best_epoch  epochs_run  val_auc  val_f1  val_precision  val_recall  val_acc  val_video_auc  val_video_f1  final_train_loss  final_val_loss  params_total  params_trainable  checkpoint_mb  sec_per_epoch  train_time_s  peak_gpu_mem_mb\r\n"}
+,{"stream_name":"stdout","time":2820.883930702,"data":"     s1_efficientnet_b4_A efficientnet_b4      A    42           6          11   0.9536  0.8501         0.9295      0.7832   0.9011         0.9793        0.9084            0.2581          0.3293      17550409          17550409        67.6287        80.9305      890.8410        1995.8374\r\n"}
+,{"stream_name":"stdout","time":2820.883936651,"data":"     s1_efficientnet_b4_B efficientnet_b4      B    42           8          13   0.9041  0.7967         0.8283      0.7675   0.8598         0.9431        0.8837            0.1895          0.4439      17550409          17550409        67.6287        68.9023      896.7734        3738.1616\r\n"}
+,{"stream_name":"stdout","time":2820.883941691,"data":"     s1_efficientnet_b4_C efficientnet_b4      C    42          30          30   0.9038  0.7833         0.7960      0.7710   0.8473         0.9537        0.9049            0.2923          0.4354      17550409          17550409        67.6287        68.0236     2044.8445        3667.9482\r\n"}
+,{"stream_name":"stdout","time":2820.883946504,"data":"            s1_resnet50_A        resnet50      A    42           3           8   0.5769  0.5288         0.3762      0.8899   0.4324         0.6087        0.7885            0.6933          0.6939      23510081          23510081        89.9732        74.5162      596.5457        1044.9082\r\n"}
+,{"stream_name":"stdout","time":2820.883951072,"data":"            s1_resnet50_B        resnet50      B    42           1           6   0.9484  0.8374         0.8614      0.8147   0.8867         0.9826        0.9208            0.2155          0.4102      23510081          23510081        89.9732        42.3317      254.1716        1722.2832\r\n"}
+,{"stream_name":"stdout","time":2820.883955873,"data":"            s1_resnet50_C        resnet50      C    42           4          11   0.9478  0.8335         0.8069      0.8619   0.8767         0.9761        0.9420            0.1757          0.3407      23510081          23510081        89.9732        41.3569      455.4885        1631.5010\r\n"}
+,{"stream_name":"stdout","time":2820.883961211,"data":"            s1_xception_A        xception      A    42           2           7   0.9486  0.8169         0.9621      0.7098   0.8861         0.9821        0.8828            0.2946          0.3372      20809001          20809001        79.6686        68.1103      477.0257        1409.9077\r\n"}
+,{"stream_name":"stdout","time":2820.883966785,"data":"            s1_xception_B        xception      B    42           3           8   0.9602  0.8589         0.8665      0.8514   0.8999         0.9838        0.9333            0.1768          0.3634      20809001          20809001        79.6686        63.9487      511.8499        2500.6016\r\n"}
+,{"stream_name":"stdout","time":2820.883985998,"data":"            s1_xception_C        xception      C    42          14          21   0.9476  0.8323         0.8644      0.8024   0.8842         0.9760        0.9132            0.1991          0.3488      20809001          20809001        79.6686        62.7695     1319.1795        2420.5830\r\n"}
+,{"stream_name":"stdout","time":2820.883991566,"data":"  s2_xception_B_E1_no_aug        xception      B    42           3           8   0.9564  0.8450         0.8370      0.8531   0.8880         0.9755        0.9254            0.1436          0.3498      20809001          20809001        79.6686        89.7590      718.3666        2518.6577\r\n"}
+,{"stream_name":"stdout","time":2820.883996223,"data":"  s2_xception_B_E2_frozen        xception      B    42          16          21   0.7828  0.4643         0.6592      0.3584   0.7040         0.8541        0.5052            0.5747          0.5698      20809001              2049        79.6686        26.8654      565.6611         783.4106\r\n"}
+,{"stream_name":"stdout","time":2820.884000845,"data":"   s2_xception_B_E3_no_ls        xception      B    42           1           6   0.9554  0.8337         0.9198      0.7622   0.8911         0.9812        0.9084            0.0969          0.3553      20809001          20809001        79.6686        63.0170      378.2421        2514.3296\r\n"}
+,{"stream_name":"stdout","time":2820.884005335,"data":"s2_xception_B_E4_lr_div10        xception      B    42           6          11   0.9530  0.8273         0.9170      0.7535   0.8874         0.9766        0.8872            0.2029          0.3244      20809001          20809001        79.6686        62.9434      693.1086        2514.3296\r\n"}
+,{"stream_name":"stdout","time":2820.884010198,"data":"  s2_xception_B_E4_lr_x10        xception      B    42           1           6   0.9517  0.8261         0.9500      0.7308   0.8899         0.9816        0.8828            0.2492          0.3849      20809001          20809001        79.6686        62.7614      376.6922        2514.3296\r\n"}
+,{"stream_name":"stdout","time":2822.558950719,"data":"shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory\r\n"}
+,{"stream_name":"stdout","time":2822.558982746,"data":"1.1G\t/kaggle/working/runs\r\n"}
+,{"stream_name":"stdout","time":2822.558987947,"data":"1.6M\t/kaggle/working/results_table\r\n"}
+,{"stream_name":"stderr","time":2825.74648127,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2825.746527796,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2825.951247524,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2825.951277268,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2826.854230362,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":2826.965355976,"data":"[NbConvertApp] Writing 1083441 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":2829.726994417,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2830.294502787,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":2830.294542471,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.294836543,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.29502085,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.295251988,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.295411745,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.295586155,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.295816796,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.295995742,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.296177031,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.29640633,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.29660923,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.296877068,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.297085518,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.297271015,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":2830.297565058,"data":"[NbConvertApp] Writing 322509 bytes to __results__.html\n"}
+]

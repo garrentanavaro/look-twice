@@ -1,0 +1,33 @@
+{
+  "model_name": "xception",
+  "timm_name": "legacy_xception.tf_in1k",
+  "input_size": 224,
+  "input": "float32 [N,3,S,S] RGB in [0,1]",
+  "output": "float32 [N] P(fake)",
+  "mean": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "std": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "thresholds": {
+    "t": 0.735255365,
+    "lo": 0.33525536499999997,
+    "hi": 1.0,
+    "width": 0.4,
+    "coverage": 0.5801001251564456,
+    "confident_acc": 0.9471413160733549,
+    "target_acc": 0.95,
+    "reached": false
+  },
+  "source_run": "s1_xception_B",
+  "best_epoch": 3,
+  "val_auc": 0.9602110852110852,
+  "onnx_mb": 79.31,
+  "opset": 17,
+  "exported_at": "2026-11-20T09:19:28+00:00"
+}

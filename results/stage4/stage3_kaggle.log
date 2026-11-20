@@ -1,0 +1,112 @@
+[{"stream_name":"stderr","time":5.7954783370000005,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":5.795520208,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":6.598364114,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.59838877,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.59839344,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.598397185,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.150683423,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.15071099,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.150716929,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.150720824,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.226804364,"data":"Cloning into '/kaggle/working/look-twice'...\n"}
+,{"stream_name":"stderr","time":8.429381216,"data":"Cloning into '/kaggle/working/look-twice'...\n"}
+,{"stream_name":"stderr","time":8.429406784,"data":"\n"}
+,{"stream_name":"stderr","time":8.429411735,"data":"Cloning into '/kaggle/working/look-twice'...\n"}
+,{"stream_name":"stdout","time":12.494679134,"data":"  Installing build dependencies ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":12.798641796,"data":"  Checking if build backend supports build_editable ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":13.154101584,"data":"  Getting requirements to build editable ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":13.356758549,"data":"  Preparing editable metadata (pyproject.toml) ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":13.762354984,"data":"  Building editable for looktwice (pyproject.toml) ... \u001b[?25l\u001b[?25hdone\r\n"}
+,{"stream_name":"stdout","time":15.03836673,"data":"name, memory.total [MiB]\r\n"}
+,{"stream_name":"stdout","time":15.038399198,"data":"Tesla T4, 15360 MiB\r\n"}
+,{"stream_name":"stdout","time":15.038408941,"data":"Tesla T4, 15360 MiB\r\n"}
+,{"stream_name":"stdout","time":21.282040667,"data":"INDEX: /kaggle/input/datasets/garrentanavaro/looktwice-faces/data/faces/crops_index.csv\n"}
+,{"stream_name":"stdout","time":21.28207685,"data":"PREV_RUNS: ['/kaggle/input/notebooks/marcoodenleo/looktwice-02-stage2/runs']\n"}
+,{"stream_name":"stdout","time":21.282082404,"data":"cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead\r\n"}
+,{"stream_name":"stdout","time":37.756587684,"data":"label     0     1\n"}
+,{"stream_name":"stdout","time":37.756622682,"data":"split            \n"}
+,{"stream_name":"stdout","time":37.75662803,"data":"test    899   548\n"}
+,{"stream_name":"stdout","time":37.756633105,"data":"train  4604  4590\n"}
+,{"stream_name":"stdout","time":37.756637907,"data":"val    1026   572\n"}
+,{"stream_name":"stdout","time":54.661352085,"data":"[1/2] s3_xception_B_seed1: run  overrides={'model.name': 'xception', 'seed': 1}\r\n"}
+,{"stream_name":"stdout","time":55.219902862,"data":"Downloading: \"https://github.com/rwightman/pytorch-image-models/releases/download/v0.1-cadene/xception-43020ad28.pth\" to /root/.cache/torch/hub/checkpoints/xception-43020ad28.pth\r\n"}
+,{"stream_name":"stdout","time":56.335637339,"data":"[s3_xception_B_seed1] device=cuda amp=True train=9194 val=1598 params=20.8M trainable=20.8M mean=(0.5, 0.5, 0.5) std=(0.5, 0.5, 0.5)\r\n"}
+,{"stream_name":"stdout","time":287.094537511,"data":"  ep01 lr=1.00e-04 train_loss=0.3819 val_loss=0.3147 val_auc=0.9529 val_f1=0.8434 video_auc=0.9842 (231s) *\r\n"}
+,{"stream_name":"stdout","time":353.578111156,"data":"  ep02 lr=9.96e-05 train_loss=0.2554 val_loss=0.3508 val_auc=0.9469 val_f1=0.7891 video_auc=0.9690 (66s)\r\n"}
+,{"stream_name":"stdout","time":419.243634789,"data":"  ep03 lr=9.84e-05 train_loss=0.2316 val_loss=0.3124 val_auc=0.9514 val_f1=0.8397 video_auc=0.9758 (66s)\r\n"}
+,{"stream_name":"stdout","time":484.8339149,"data":"  ep04 lr=9.65e-05 train_loss=0.2177 val_loss=0.3059 val_auc=0.9519 val_f1=0.8444 video_auc=0.9729 (66s)\r\n"}
+,{"stream_name":"stdout","time":550.291037855,"data":"  ep05 lr=9.38e-05 train_loss=0.2026 val_loss=0.3183 val_auc=0.9452 val_f1=0.8418 video_auc=0.9665 (65s)\r\n"}
+,{"stream_name":"stdout","time":615.80672674,"data":"  ep06 lr=9.05e-05 train_loss=0.1918 val_loss=0.3420 val_auc=0.9375 val_f1=0.8350 video_auc=0.9642 (66s)\r\n"}
+,{"stream_name":"stdout","time":615.806754663,"data":"  early stop at epoch 6 (best val_auc=0.9529 @ 1)\r\n"}
+,{"stream_name":"stdout","time":615.899184155,"data":"[2/2] s3_xception_B_seed2: run  overrides={'model.name': 'xception', 'seed': 2}\r\n"}
+,{"stream_name":"stdout","time":616.406669316,"data":"[s3_xception_B_seed2] device=cuda amp=True train=9194 val=1598 params=20.8M trainable=20.8M mean=(0.5, 0.5, 0.5) std=(0.5, 0.5, 0.5)\r\n"}
+,{"stream_name":"stdout","time":682.058925031,"data":"  ep01 lr=1.00e-04 train_loss=0.3816 val_loss=0.3102 val_auc=0.9566 val_f1=0.8300 video_auc=0.9809 (66s) *\r\n"}
+,{"stream_name":"stdout","time":747.841352038,"data":"  ep02 lr=9.96e-05 train_loss=0.2606 val_loss=0.3441 val_auc=0.9438 val_f1=0.8030 video_auc=0.9707 (66s)\r\n"}
+,{"stream_name":"stdout","time":813.34964701,"data":"  ep03 lr=9.84e-05 train_loss=0.2324 val_loss=0.4167 val_auc=0.9062 val_f1=0.7441 video_auc=0.9358 (66s)\r\n"}
+,{"stream_name":"stdout","time":878.881219391,"data":"  ep04 lr=9.65e-05 train_loss=0.2136 val_loss=0.3632 val_auc=0.9257 val_f1=0.7990 video_auc=0.9545 (66s)\r\n"}
+,{"stream_name":"stdout","time":944.416623831,"data":"  ep05 lr=9.38e-05 train_loss=0.2038 val_loss=0.3872 val_auc=0.9136 val_f1=0.7767 video_auc=0.9529 (65s)\r\n"}
+,{"stream_name":"stdout","time":1009.735793533,"data":"  ep06 lr=9.05e-05 train_loss=0.1914 val_loss=0.3943 val_auc=0.9179 val_f1=0.7853 video_auc=0.9536 (65s)\r\n"}
+,{"stream_name":"stdout","time":1009.735847373,"data":"  early stop at epoch 6 (best val_auc=0.9566 @ 1)\r\n"}
+,{"stream_name":"stdout","time":1009.882364411,"data":"                      run           model recipe  seed  best_epoch  epochs_run  val_auc  val_f1  val_precision  val_recall  val_acc  val_video_auc  val_video_f1  final_train_loss  final_val_loss  params_total  params_trainable  checkpoint_mb  sec_per_epoch  train_time_s  peak_gpu_mem_mb\r\n"}
+,{"stream_name":"stdout","time":1009.882408038,"data":"     s1_efficientnet_b4_A efficientnet_b4      A    42           6          11   0.9536  0.8501         0.9295      0.7832   0.9011         0.9793        0.9084            0.2581          0.3293      17550409          17550409        67.6287        80.9305      890.8410        1995.8374\r\n"}
+,{"stream_name":"stdout","time":1009.882414379,"data":"     s1_efficientnet_b4_B efficientnet_b4      B    42           8          13   0.9041  0.7967         0.8283      0.7675   0.8598         0.9431        0.8837            0.1895          0.4439      17550409          17550409        67.6287        68.9023      896.7734        3738.1616\r\n"}
+,{"stream_name":"stdout","time":1009.882432538,"data":"     s1_efficientnet_b4_C efficientnet_b4      C    42          30          30   0.9038  0.7833         0.7960      0.7710   0.8473         0.9537        0.9049            0.2923          0.4354      17550409          17550409        67.6287        68.0236     2044.8445        3667.9482\r\n"}
+,{"stream_name":"stdout","time":1009.882436882,"data":"            s1_resnet50_A        resnet50      A    42           3           8   0.5769  0.5288         0.3762      0.8899   0.4324         0.6087        0.7885            0.6933          0.6939      23510081          23510081        89.9732        74.5162      596.5457        1044.9082\r\n"}
+,{"stream_name":"stdout","time":1009.882440934,"data":"            s1_resnet50_B        resnet50      B    42           1           6   0.9484  0.8374         0.8614      0.8147   0.8867         0.9826        0.9208            0.2155          0.4102      23510081          23510081        89.9732        42.3317      254.1716        1722.2832\r\n"}
+,{"stream_name":"stdout","time":1009.882444985,"data":"            s1_resnet50_C        resnet50      C    42           4          11   0.9478  0.8335         0.8069      0.8619   0.8767         0.9761        0.9420            0.1757          0.3407      23510081          23510081        89.9732        41.3569      455.4885        1631.5010\r\n"}
+,{"stream_name":"stdout","time":1009.882450612,"data":"            s1_xception_A        xception      A    42           2           7   0.9486  0.8169         0.9621      0.7098   0.8861         0.9821        0.8828            0.2946          0.3372      20809001          20809001        79.6686        68.1103      477.0257        1409.9077\r\n"}
+,{"stream_name":"stdout","time":1009.882454748,"data":"            s1_xception_B        xception      B    42           3           8   0.9602  0.8589         0.8665      0.8514   0.8999         0.9838        0.9333            0.1768          0.3634      20809001          20809001        79.6686        63.9487      511.8499        2500.6016\r\n"}
+,{"stream_name":"stdout","time":1009.882458918,"data":"            s1_xception_C        xception      C    42          14          21   0.9476  0.8323         0.8644      0.8024   0.8842         0.9760        0.9132            0.1991          0.3488      20809001          20809001        79.6686        62.7695     1319.1795        2420.5830\r\n"}
+,{"stream_name":"stdout","time":1009.882464466,"data":"  s2_xception_B_E1_no_aug        xception      B    42           3           8   0.9564  0.8450         0.8370      0.8531   0.8880         0.9755        0.9254            0.1436          0.3498      20809001          20809001        79.6686        89.7590      718.3666        2518.6577\r\n"}
+,{"stream_name":"stdout","time":1009.882491598,"data":"  s2_xception_B_E2_frozen        xception      B    42          16          21   0.7828  0.4643         0.6592      0.3584   0.7040         0.8541        0.5052            0.5747          0.5698      20809001              2049        79.6686        26.8654      565.6611         783.4106\r\n"}
+,{"stream_name":"stdout","time":1009.882496558,"data":"   s2_xception_B_E3_no_ls        xception      B    42           1           6   0.9554  0.8337         0.9198      0.7622   0.8911         0.9812        0.9084            0.0969          0.3553      20809001          20809001        79.6686        63.0170      378.2421        2514.3296\r\n"}
+,{"stream_name":"stdout","time":1009.88250122,"data":"s2_xception_B_E4_lr_div10        xception      B    42           6          11   0.9530  0.8273         0.9170      0.7535   0.8874         0.9766        0.8872            0.2029          0.3244      20809001          20809001        79.6686        62.9434      693.1086        2514.3296\r\n"}
+,{"stream_name":"stdout","time":1009.882510839,"data":"  s2_xception_B_E4_lr_x10        xception      B    42           1           6   0.9517  0.8261         0.9500      0.7308   0.8899         0.9816        0.8828            0.2492          0.3849      20809001          20809001        79.6686        62.7614      376.6922        2514.3296\r\n"}
+,{"stream_name":"stdout","time":1009.882515046,"data":"      s3_xception_B_seed1        xception      B     1           1           6   0.9529  0.8434         0.8743      0.8147   0.8917         0.9842        0.9248            0.1918          0.3420      20809001          20809001        79.6686        93.2254      559.4847        2518.6577\r\n"}
+,{"stream_name":"stdout","time":1009.882519038,"data":"      s3_xception_B_seed2        xception      B     2           1           6   0.9566  0.8300         0.8966      0.7727   0.8867         0.9809        0.8828            0.1914          0.3943      20809001          20809001        79.6686        65.5409      393.3644        2514.3296\r\n"}
+,{"stream_name":"stdout","time":1035.899169009,"data":"                      run           model recipe  seed  best_epoch  epochs_run  val_auc  val_f1  val_precision  val_recall  val_acc  val_video_auc  val_video_f1  final_train_loss  final_val_loss  params_total  params_trainable  checkpoint_mb  sec_per_epoch  train_time_s  peak_gpu_mem_mb\r\n"}
+,{"stream_name":"stdout","time":1035.89920377,"data":"     s1_efficientnet_b4_A efficientnet_b4      A    42           6          11   0.9536  0.8501         0.9295      0.7832   0.9011         0.9793        0.9084            0.2581          0.3293      17550409          17550409        67.6287        80.9305      890.8410        1995.8374\r\n"}
+,{"stream_name":"stdout","time":1035.899209722,"data":"     s1_efficientnet_b4_B efficientnet_b4      B    42           8          13   0.9041  0.7967         0.8283      0.7675   0.8598         0.9431        0.8837            0.1895          0.4439      17550409          17550409        67.6287        68.9023      896.7734        3738.1616\r\n"}
+,{"stream_name":"stdout","time":1035.899215981,"data":"     s1_efficientnet_b4_C efficientnet_b4      C    42          30          30   0.9038  0.7833         0.7960      0.7710   0.8473         0.9537        0.9049            0.2923          0.4354      17550409          17550409        67.6287        68.0236     2044.8445        3667.9482\r\n"}
+,{"stream_name":"stdout","time":1035.899221034,"data":"            s1_resnet50_A        resnet50      A    42           3           8   0.5769  0.5288         0.3762      0.8899   0.4324         0.6087        0.7885            0.6933          0.6939      23510081          23510081        89.9732        74.5162      596.5457        1044.9082\r\n"}
+,{"stream_name":"stdout","time":1035.89922691,"data":"            s1_resnet50_B        resnet50      B    42           1           6   0.9484  0.8374         0.8614      0.8147   0.8867         0.9826        0.9208            0.2155          0.4102      23510081          23510081        89.9732        42.3317      254.1716        1722.2832\r\n"}
+,{"stream_name":"stdout","time":1035.89923253,"data":"            s1_resnet50_C        resnet50      C    42           4          11   0.9478  0.8335         0.8069      0.8619   0.8767         0.9761        0.9420            0.1757          0.3407      23510081          23510081        89.9732        41.3569      455.4885        1631.5010\r\n"}
+,{"stream_name":"stdout","time":1035.899238467,"data":"            s1_xception_A        xception      A    42           2           7   0.9486  0.8169         0.9621      0.7098   0.8861         0.9821        0.8828            0.2946          0.3372      20809001          20809001        79.6686        68.1103      477.0257        1409.9077\r\n"}
+,{"stream_name":"stdout","time":1035.899257331,"data":"            s1_xception_B        xception      B    42           3           8   0.9602  0.8589         0.8665      0.8514   0.8999         0.9838        0.9333            0.1768          0.3634      20809001          20809001        79.6686        63.9487      511.8499        2500.6016\r\n"}
+,{"stream_name":"stdout","time":1035.899262751,"data":"            s1_xception_C        xception      C    42          14          21   0.9476  0.8323         0.8644      0.8024   0.8842         0.9760        0.9132            0.1991          0.3488      20809001          20809001        79.6686        62.7695     1319.1795        2420.5830\r\n"}
+,{"stream_name":"stdout","time":1035.899288082,"data":"  s2_xception_B_E1_no_aug        xception      B    42           3           8   0.9564  0.8450         0.8370      0.8531   0.8880         0.9755        0.9254            0.1436          0.3498      20809001          20809001        79.6686        89.7590      718.3666        2518.6577\r\n"}
+,{"stream_name":"stdout","time":1035.899296153,"data":"  s2_xception_B_E2_frozen        xception      B    42          16          21   0.7828  0.4643         0.6592      0.3584   0.7040         0.8541        0.5052            0.5747          0.5698      20809001              2049        79.6686        26.8654      565.6611         783.4106\r\n"}
+,{"stream_name":"stdout","time":1035.899300923,"data":"   s2_xception_B_E3_no_ls        xception      B    42           1           6   0.9554  0.8337         0.9198      0.7622   0.8911         0.9812        0.9084            0.0969          0.3553      20809001          20809001        79.6686        63.0170      378.2421        2514.3296\r\n"}
+,{"stream_name":"stdout","time":1035.899305227,"data":"s2_xception_B_E4_lr_div10        xception      B    42           6          11   0.9530  0.8273         0.9170      0.7535   0.8874         0.9766        0.8872            0.2029          0.3244      20809001          20809001        79.6686        62.9434      693.1086        2514.3296\r\n"}
+,{"stream_name":"stdout","time":1035.899310255,"data":"  s2_xception_B_E4_lr_x10        xception      B    42           1           6   0.9517  0.8261         0.9500      0.7308   0.8899         0.9816        0.8828            0.2492          0.3849      20809001          20809001        79.6686        62.7614      376.6922        2514.3296\r\n"}
+,{"stream_name":"stdout","time":1035.899314976,"data":"      s3_xception_B_seed1        xception      B     1           1           6   0.9529  0.8434         0.8743      0.8147   0.8917         0.9842        0.9248            0.1918          0.3420      20809001          20809001        79.6686        93.2254      559.4847        2518.6577\r\n"}
+,{"stream_name":"stdout","time":1035.899319297,"data":"      s3_xception_B_seed2        xception      B     2           1           6   0.9566  0.8300         0.8966      0.7727   0.8867         0.9809        0.8828            0.1914          0.3943      20809001          20809001        79.6686        65.5409      393.3644        2514.3296\r\n"}
+,{"stream_name":"stdout","time":1037.499254417,"data":"shell-init: error retrieving current directory: getcwd: cannot access parent directories: No such file or directory\r\n"}
+,{"stream_name":"stdout","time":1037.499308916,"data":"1.3G\t/kaggle/working/runs\r\n"}
+,{"stream_name":"stdout","time":1037.499314732,"data":"1.8M\t/kaggle/working/results_table\r\n"}
+,{"stream_name":"stderr","time":1040.272952604,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1040.272983057,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1040.406062416,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1040.406099674,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1041.181148861,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1041.285821396,"data":"[NbConvertApp] Writing 1241848 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1043.844113658,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1044.384356244,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":1044.384387524,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.384646598,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.384880151,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.385091297,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.385263358,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.385454677,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.385629441,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.385780875,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.385940333,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.386114187,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.386280108,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.386524754,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.386700448,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.38686926,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.387044358,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.387215943,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":1044.387502709,"data":"[NbConvertApp] Writing 320458 bytes to __results__.html\n"}
+]

@@ -1,0 +1,7 @@
+engine,device,mean_ms,p50_ms,p95_ms,run,model,input_size,threads,batch,under_200ms
+pytorch,"cpu (Intel64 Family 6 Model 183 Stepping 1, GenuineIntel)",36.570105999708176,36.31409999798052,40.01819000477553,s1_xception_B,xception,224,14,1,True
+onnxruntime,"cpu (Intel64 Family 6 Model 183 Stepping 1, GenuineIntel)",14.131023999070749,13.668149993463885,14.7655599990685,s1_xception_B,xception,224,14,1,True
+pytorch,"cpu (Intel64 Family 6 Model 183 Stepping 1, GenuineIntel)",94.48152400145773,94.34789999795612,103.20921500169788,s1_efficientnet_b4_A,efficientnet_b4,224,14,1,True
+onnxruntime,"cpu (Intel64 Family 6 Model 183 Stepping 1, GenuineIntel)",33.01762799936114,32.865100001799874,36.148279991175514,s1_efficientnet_b4_A,efficientnet_b4,224,14,1,True
+pytorch,"cpu (Intel64 Family 6 Model 183 Stepping 1, GenuineIntel)",30.32601200073259,29.898050001065712,32.669034998252755,s1_resnet50_B,resnet50,224,14,1,True
+onnxruntime,"cpu (Intel64 Family 6 Model 183 Stepping 1, GenuineIntel)",12.059222001116723,12.050750003254507,12.97262000007322,s1_resnet50_B,resnet50,224,14,1,True
